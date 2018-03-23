@@ -1,12 +1,13 @@
 Feature: Login Action
 
-Scenario: Test  login with valid credentials
+Scenario Outline: Test  login with valid credentials
     Given open browser and start application
-    When I enter valid Username as "manohar.sureshbabu@cns-inc.com" and valid Password as "XXXX"
+    When I enter valid Username as "<uName>" and valid Password as "<pwd>"
     Then User should be able to login successful
     And Close the Browser 
-    #Examples:
-   
+Examples: 
+    |uName|pwd|
+    |manohar.sureshbabu@cns-inc.com|XXXXXX|
     
 #Scenario: Login Negative Case
 	#Given open browser and start application
